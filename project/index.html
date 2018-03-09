@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<title>团购网</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<div class="go-back">
+				<span class="arrow">
+					<span class="arrow green"></span>
+				</span>
+			</div>
+			<div class="login">登录</div>
+			<h1>团购网</h1>
+		</div>
+		<div class="search">
+			<input type="text" placeholder="请输入搜索关键字">
+		</div>
+		<!-- 定义组件 -->
+		<!-- <home></home>
+		<list></list>
+		<detail></detail> -->
+		<component v-bind:is="view"></component>
+	</div>
+	
+<script type="text/javascript" src="js/vue.js"></script>	
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
