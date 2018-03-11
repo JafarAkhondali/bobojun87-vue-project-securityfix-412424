@@ -26,6 +26,49 @@
 		<detail></detail> -->
 		<component v-bind:is="view"></component>
 	</div>
+	<!-- home组件模版 -->
+	<template id="tpl_home">
+		<div class="home">
+			<!-- 分类 -->
+			<ul class="types clearFix">
+				<li v-for="item in icons">
+					<a :href="'#list/type/' + item.id">
+						<img :src="'image/icon/' + item.img" alt="">
+						<p>{{item.title}}</p>
+					</a>
+				</li>
+			</ul>
+			<!-- 广告 -->
+			<ul class="ads clearFix">
+				<li v-for="(item, index) in ad">
+					<a :href="'#/detail/' + item.id">
+						<h3 :class="'color-' + index">{{item.title}}</h3>
+						<p>{{item.description}}</p>
+						<img :src="'image/ad/' + item.url" alt="">
+					</a>
+				</li>
+			</ul>
+			<!-- 列表 -->
+			<div class="guess">
+				<h2>猜你喜欢</h2>
+				<ul class="items">
+					<li v-for="item in list">
+						<a :href="'#/detail/' + item.id" class="clearFix">
+							<img :src="'image/list/' + item.img" alt="">
+							<div class="content">
+								<h3>{{item.title}}</h3>
+								<p>
+									<span class="price">{{item.price}}元</span>
+									<span>门市价:{{item.originPrice}}元</span>
+									<span class="sales">销量{{item.sales}}</span>
+								</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</template>
 	
 <script type="text/javascript" src="js/vue.js"></script>	
 <script type="text/javascript" src="js/index.js"></script>
