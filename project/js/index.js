@@ -56,7 +56,31 @@ var Home = Vue.extend({
 })
 // List组件
 var List = Vue.extend({
-	template: '<h1>List</h1>'
+	template: '#tpl_list',
+	data: function() {
+		return {
+			orders: [
+				{id: 'price', text:'价格排序'}, 
+				{id: 'sales', text:'销量排序'}, 
+				{id: 'evaluate', text:'好评排序'}, 
+				{id: 'discount', text:'优惠排序'}
+			],
+			listItems: [],
+			otherItems: [],
+			otherItemsLen: 0
+		}
+	},
+	mounted: function() {
+		var self = this;
+		console.log(this.$parent.route[1])
+		Util.ajax("data/list.json?id=" + this.$parent.route[1], function(res) {
+			if (res && res.errno === 0) {
+				self.listItems = res.data.slice(0, 3);
+				self.otherItems = res.data.slice(3);
+				self.otherItemsLen = self.otherItems.length;
+			}
+		})
+	}
 })
 // Detail组件
 var Detail = Vue.extend({
@@ -71,7 +95,7 @@ Vue.component('detail', Detail);
 var app = new Vue({
 	el: '#app',
 	data: {
-		view: 'list',
+		view: 'home',
 		route: []
 	}
 })

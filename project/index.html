@@ -59,7 +59,7 @@
 								<h3>{{item.title}}</h3>
 								<p>
 									<span class="price">{{item.price}}元</span>
-									<span>门市价:{{item.originPrice}}元</span>
+									<span class="origin-price">门市价:{{item.originPrice}}元</span>
 									<span class="sales">销量{{item.sales}}</span>
 								</p>
 							</div>
@@ -69,7 +69,40 @@
 			</div>
 		</div>
 	</template>
-	
+	<template id="tpl_list">
+		<div class="list">
+			<ul class="orders">
+				<li v-for="item in orders">
+					<a href="">
+						<span>{{item.text}}
+							<span class="arrow"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="items clearFix">
+				<li v-for="item in listItems">
+					<a :href="'#/detail/' + item.id">
+						<img :src="'image/list/' + item.img" alt="">
+						<div class="content">
+							<h3>{{item.title}}</h3>
+							<p>
+								<span class="price">{{item.price}}元</span>
+								<span class="origin-price">门市价:{{item.originPrice}}元</span>
+								<span class="sales">销量{{item.sales}}</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="load-more">
+				<span class="text">查看其他{{otherItemsLen}}条团购</span>
+				<span class="arrow">
+					<span class="arrow white"></span>
+				</span>
+			</div>
+		</div>
+	</template>
 <script type="text/javascript" src="js/vue.js"></script>	
 <script type="text/javascript" src="js/index.js"></script>
 </body>
