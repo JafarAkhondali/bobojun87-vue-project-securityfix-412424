@@ -18,13 +18,13 @@
 			<h1>团购网</h1>
 		</div>
 		<div class="search">
-			<input type="text" placeholder="请输入搜索关键字">
+			<input type="text" v-model="searchValue" @keydown.enter="searchResult" placeholder="请输入搜索关键字">
 		</div>
 		<!-- 定义组件 -->
 		<!-- <home></home>
 		<list></list>
 		<detail></detail> -->
-		<component v-bind:is="view"></component>
+		<component v-bind:is="view" :search-query="query"></component>
 	</div>
 	<!-- home组件模版 -->
 	<template id="tpl_home">
@@ -73,15 +73,14 @@
 		<div class="list">
 			<ul class="orders">
 				<li v-for="item in orders">
-					<a href="">
-						<span>{{item.text}}
-							<span class="arrow"></span>
-						</span>
-					</a>
+					<span @click="sortList(item.id)">
+						{{item.text}}
+						<span class="arrow"></span>
+					</span>
 				</li>
 			</ul>
 			<ul class="items clearFix">
-				<li v-for="item in listItems">
+				<li v-for="item in listFilterResult">
 					<a :href="'#/detail/' + item.id">
 						<img :src="'image/list/' + item.img" alt="">
 						<div class="content">
@@ -95,8 +94,8 @@
 					</a>
 				</li>
 			</ul>
-			<div class="load-more">
-				<span class="text">查看其他{{otherItemsLen}}条团购</span>
+			<div class="load-more" v-show="others.length" @click="showOthers">
+				<span class="text">查看其他{{others.length}}条团购</span>
 				<span class="arrow">
 					<span class="arrow white"></span>
 				</span>
