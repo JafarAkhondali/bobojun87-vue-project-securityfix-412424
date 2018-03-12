@@ -1,0 +1,54 @@
+/*列表页*/
+.list {
+	background: #fff;
+}
+.list .orders {
+	border-bottom: 1px solid #ccc;
+	height: 30px;
+}
+.list .orders li {
+	width: 25%;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.list .orders li:last-child {
+	border-right: none;
+}
+.list .orders li .arrow {
+	position: relative;
+	top: 12px;
+	left: 3px;
+	border: 5px solid transparent;
+	border-top: 5px solid #000;
+}
+.list .load-more {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+	color: #06c1ae;
+	font-size: 16px;
+	text-align: center;
+}
+
+.list .load-more .arrow {
+	font-size: 0;
+	border: 10px solid transparent;
+	border-top-color: #06c1ae;
+	position: relative;
+	left: 10px;
+}
+.list .load-more .arrow.white {
+	position: absolute;
+	top: -13px;
+    left: -10px;
+	border-top-color: #fff;	
+}

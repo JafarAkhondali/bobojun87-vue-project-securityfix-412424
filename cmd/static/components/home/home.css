@@ -1,0 +1,67 @@
+/*home样式*/
+/*分类*/
+.home .types {
+	background: #fff;
+	margin-bottom: 10px;
+}
+.home .types li {
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.home .types li img {
+	width: 60%;
+}
+.home .types li p {
+	font-size: 12px;
+	margin: 3px auto 10px;
+}
+/*广告*/
+.home .ads {
+	background: #fff;
+	margin-bottom: 10px;
+}
+.home .ads li {
+	width: 33.33333333%;
+	border-right: 1px solid #ccc;
+	float: left;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+.home .ads li:last-child {
+	border-right: none;
+}
+.home .ads li h3 {
+	font-size: 18px;
+
+}
+.home .ads li p {
+	font-size: 14px;
+}
+.home .ads li img {
+	width: 60%;
+}
+.home .ads li h3.color-0 {
+	color: red;
+}
+.home .ads li h3.color-1 {
+	color: blue;
+}
+.home .ads li h3.color-2 {
+	color: green;
+}
+/*猜你喜欢*/
+.guess {
+	background: #fff;
+}
+.guess h2 {
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: normal;
+	border-bottom: 1px solid #ccc;
+	margin: 0 10px;
+}

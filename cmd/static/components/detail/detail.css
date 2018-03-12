@@ -1,0 +1,85 @@
+/*detail*/
+.detail .img-part {
+	position: relative;
+}
+.detail .img-part img {
+	width: 100%;
+}
+.detail .img-part h1,
+.detail .img-part p {
+	position: absolute;
+	left: 20px;
+	bottom: 15px;
+	color: #fff;
+}
+.detail .img-part h1 {
+	bottom: 40px;
+	font-size: 24px;
+}
+.detail .price-part {
+	padding: 0 10px;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+}
+.detail .price-part .price {
+	color: #06c1ae;
+}
+.detail .price-part .price strong {
+	font-size: 24px;
+}
+.detail .price-part .origin-price {
+	margin-left: 5px;
+}
+.detail .price-part .buy {
+	float: right;
+	padding: 8px 14px;
+	background-color: #f60;
+	line-height: 14px;
+	margin: 10px 0;
+}
+
+.detail .sales-part {
+	margin-bottom: 10px;
+	background: #fff;
+	padding: 10px 0;
+}
+.detail .sales-part li {
+	float: left;
+	width: 50%;
+	text-indent: 10px;
+	line-height: 30px;
+	color: yellowgreen;
+}
+.detail .sales-part li:last-child {
+	color: #666;
+}
+.detail .module {
+	margin-bottom: 10px;
+	background: #fff;
+	padding: 10px;
+}
+.detail .module-header {
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	font-size: 20px;
+}
+.detail .module-body {
+	padding: 10px 0;
+}
+.detail .module-body h3 {
+	color: #f60;
+	line-height: 40px;
+	font-weight: normal;
+	font-size: 18px;
+}
+.detail .module-body p {
+	line-height: 26px;
+}
+.detail .module-footer {
+	border-top: 1px solid #ccc;
+	color: skyblue;
+	line-height: 30px;
+	padding-top: 5px;
+}

@@ -1,0 +1,47 @@
+.header {
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	background-color: #06c1ae;
+}
+.header .go-back {
+	float: left;
+	position: relative;
+}
+.header .go-back .arrow {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	border: 10px solid transparent;
+	border-right-color: #fff; 
+}
+.header .arrow .green {
+	border-right-color: #06c1ae;
+	top: -10px;
+	left: -7px;
+}
+.header .login {
+	float: right;
+	margin-right: 10px;
+	font-size: 14px;
+}
+.header h1 {
+	text-indent: 20px;
+	font-size: 24px;
+	text-align: center;
+}
+.search {
+	padding: 10px 20px;
+	background: #fff;
+}
+.search input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	background: #efefef;
+	border-radius: 20px;
+	font-size: 14px;
+	border: none;
+	outline: none;
+	margin-bottom: 5px;
+}

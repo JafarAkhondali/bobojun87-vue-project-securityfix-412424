@@ -1,0 +1,27 @@
+.items {
+	padding: 0 10px;
+}
+.items li {
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.items li img {
+	width: 100px;
+	float: left;
+}
+.items li div.content {
+	margin-left: 110px;
+}
+.items li div.content h3{
+	font-size: 14px;
+	height: 45px;
+}
+.items li div.content p{
+	font-size: 12px;
+}
+.items li div.content p span.price{
+	color: #06c1ae;
+}
+.items li div.content p span.sales{
+	float: right;
+}

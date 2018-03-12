@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	background: #efefef;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+.clearFix:after {
+	content: '';
+	clear: both;
+	display: block;
+}
