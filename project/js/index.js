@@ -103,7 +103,7 @@ var List = Vue.extend({
 			var result = [];
 			// 获取输入框的值
 			var query = this.searchQuery;
-			console.log(query)
+			// console.log(query)
 			this.list.forEach(function(item, index) {
 				if (item.title.indexOf(query) >= 0) {
 					result.push(item);
@@ -115,7 +115,22 @@ var List = Vue.extend({
 })
 // Detail组件
 var Detail = Vue.extend({
-	template: '<h1>Detail</h1>'
+	template: '#tpl_detail',
+	data: function() {
+		return {
+			detail: {}
+		}
+	},
+	mounted: function() {
+		var self = this;
+		// console.log(this.$parent.route[0])
+		Util.ajax("data/product.json?id=" + this.$parent.route[0], function(res) {
+			if (res && res.errno === 0) {
+				// console.log(res.data)
+				self.detail = res.data;
+			}
+		})
+	}
 })
 // 注册组件
 Vue.component('home', Home);
