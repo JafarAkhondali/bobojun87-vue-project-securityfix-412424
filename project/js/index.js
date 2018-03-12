@@ -150,6 +150,9 @@ var app = new Vue({
 		searchResult: function() {
 			this.query = this.searchValue;
 			this.searchValue = '';
+		},
+		goBack: function() {
+			history.go(-1)
 		}
 	}
 })
